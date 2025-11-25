@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #212529;
+    --primary-color: #4dabf7;
+    --primary-hover: #339af0;
+    --success-color: #40c057;
+    --error-color: #fa5252;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.question-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 480px) {
+    .options-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.option-btn {
+    background-color: var(--card-bg);
+    border: 2px solid transparent;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+}
+
+.option-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-color);
+}
+
+.option-btn:active {
+    transform: translateY(0);
+}
+
+.option-btn.correct {
+    background-color: var(--success-color);
+    color: white;
+    border-color: var(--success-color);
+}
+
+.option-btn.incorrect {
+    background-color: var(--error-color);
+    color: white;
+    border-color: var(--error-color);
+}
+
+.status-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #868e96;
+}
+
+.feedback-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 600;
+    min-height: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}

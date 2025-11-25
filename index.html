@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Vocabulary Quiz</h1>
+        </header>
+
+        <main id="quiz-container">
+            <div id="loading" class="status-message">Loading words...</div>
+
+            <div id="question-area" class="hidden">
+                <div class="question-card">
+                    <h2 id="question-text">Question</h2>
+                </div>
+
+                <div id="options-container" class="options-grid">
+                    <!-- Options will be injected here -->
+                </div>
+
+                <div id="feedback-area" class="feedback-message hidden">
+                    <!-- Feedback text -->
+                </div>
+            </div>
+
+            <div id="error-message" class="status-message hidden">
+                Failed to load data. Please refresh.
+            </div>
+        </main>
+    </div>
+
+    <script src="data/words.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
