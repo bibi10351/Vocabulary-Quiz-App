@@ -1,6 +1,6 @@
 :root {
-    --bg-color: #f8f9fa;
-    --card-bg: #ffffff;
+    --bg-color: #1C3A3B !important;
+    --card-bg: #F5F5F0;
     --text-color: #212529;
     --primary-color: #4dabf7;
     --primary-hover: #339af0;
@@ -54,7 +54,7 @@ h1 {
 
 #question-text {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .options-grid {
