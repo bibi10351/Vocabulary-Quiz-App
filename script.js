@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionsContainerEl = document.getElementById('options-container');
     const feedbackAreaEl = document.getElementById('feedback-area');
     const errorEl = document.getElementById('error-message');
+    const nextButtonEl = document.getElementById('next-button');
 
     // Fetch data
     fetch(wordsUrl)
@@ -41,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 errorEl.classList.remove('hidden');
             }
         });
+
+    if (nextButtonEl) {
+        nextButtonEl.addEventListener('click', () => {
+            loadNewQuestion();
+        });
+    }
 
     function loadNewQuestion() {
         isAnswering = true;
@@ -112,10 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         feedbackAreaEl.classList.remove('hidden');
 
-        // Load next question after a short delay
-        setTimeout(() => {
-            loadNewQuestion();
-        }, 1500);
+        // Auto-advance removed. User must click "Next Question".
     }
 
     // Fisher-Yates shuffle
