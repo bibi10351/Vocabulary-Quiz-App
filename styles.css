@@ -142,3 +142,11 @@ h1 {
 .hidden {
     display: none;
 }
+
+.word-level {
+    font-size: 0.9rem;
+    color: #868e96;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    display: block;
+}

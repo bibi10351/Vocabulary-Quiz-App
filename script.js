@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderQuestion() {
-        questionTextEl.textContent = currentQuestion.correct.meaning;
+        const levelHtml = currentQuestion.correct.level ? `<span class="word-level">${currentQuestion.correct.level}</span>` : '';
+        questionTextEl.innerHTML = `${levelHtml}${currentQuestion.correct.meaning}`;
         optionsContainerEl.innerHTML = '';
 
         currentQuestion.options.forEach(option => {
